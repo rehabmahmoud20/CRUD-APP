@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="w-75 mx-auto  py-4">
+        <label for="product-name" >product name :</label>
+        <input type="text" id="product-name" class="form-control my-3">
+        <label for="product-price" >product price :</label>
+        <input type="number" id="product-price" class="form-control my-3">
+        <label for="product-category"  >product category :</label>
+        <input type="text" id="product-category" class="form-control my-3">
+        <label for="product_des" >product description :</label>
+        <textarea type="text" id="product_des" class="form-control my-3"></textarea>
+        <button onclick="addProduct()" class="btn btn-primary" id="changebtn">add product</button>
+        <button onclick="updateNewValues(updateIndex)" class="btn btn-primary" id="update">update</button>
+
+
+
+    </div>
+   
+   <div class="table w-75 mx-auto py-3">
+       <div class="table w-75 mx-auto py-3">
+       
+       <input   onkeyup="search(this.value)" placeholder="search.." type="text" id="search" class="form-control my-3">
+    </div>
+       <table class="table">
+       <thead>
+           <th>index</th>
+           <th>product name</th>
+           <th>product price</th>
+           <th>product category</th>
+           <th>product description</th>
+           <th>update</th>
+           <th>delete</th>
+       </thead>
+       <tbody id="display">
+         
+       </tbody>
+    </table>
+
+   </div>
+
+ <script src="main.js"></script>   
+</body>
+</html>
